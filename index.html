@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff2f8">
+<meta name="description" content="A little universe made for Nusrat Jahan — Happy Birthday, my beautiful pori.">
+<title>For Nusrat — 12 October ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body class="gate-active">
+<div id="birthdayGate" class="birthday-gate" aria-label="Birthday surprise">
+  <div class="gate-stars" aria-hidden="true"></div>
+  <div class="gate-petal p1">♡</div><div class="gate-petal p2">✦</div><div class="gate-petal p3">♡</div><div class="gate-petal p4">✧</div>
+  <div class="gate-phase gate-phase-candle active" data-phase="candle">
+    <p class="gate-kicker">A little surprise for you</p>
+    <h1>Before we begin,<br><em>make a wish.</em></h1>
+    <p class="gate-hint">Blow out the candle, Nusrat ♡</p>
+    <button id="blowGateCandle" class="gate-candle-stage" aria-label="Blow out the birthday candle">
+      <span class="gate-candle-flame"></span>
+      <span class="gate-candle-body"></span>
+      <span class="gate-cake-base"><i></i><b></b><b></b><b></b></span>
+      <span class="gate-cake-plate"></span>
+      <span class="gate-tap">tap / blow ♡</span>
+    </button>
+    <p class="gate-small">Make your wish… then tap the candle.</p>
+  </div>
+
+  <div class="gate-phase gate-phase-cake" data-phase="cake">
+    <p class="gate-kicker">Your wish is safe with me</p>
+    <h1>Now, let's cut<br><em>your cake.</em></h1>
+    <p class="gate-hint">Touch anywhere on the cake to cut it there ✨</p>
+    <div id="gateCake" class="gate-cut-cake" aria-label="Touch the cake to cut it">
+      <div class="gate-knife" id="gateKnife">♡</div>
+      <div class="gate-cake-layer top"><span></span></div>
+      <div class="gate-cake-layer middle"></div>
+      <div class="gate-cake-layer bottom"></div>
+      <div class="gate-cake-cream"></div>
+      <div class="gate-cake-plate"></div>
+    </div>
+    <p id="cakeCutHint" class="gate-small">One little touch… right where you want your slice.</p>
+  </div>
+
+  <div class="gate-phase gate-phase-gift" data-phase="gift">
+    <p class="gate-kicker">One last little step</p>
+    <h1>Something sweet<br><em>is waiting for you.</em></h1>
+    <p class="gate-hint">Open the gift box ♡</p>
+    <button id="gateGift" class="gate-gift" aria-label="Open the birthday gift">
+      <span class="gift-lid-g"><i></i></span><span class="gift-box-g"><i></i><b></b></span>
+      <span class="gift-ribbon-g"></span><span class="gift-sparkle-g s1">✦</span><span class="gift-sparkle-g s2">♡</span><span class="gift-sparkle-g s3">✧</span>
+    </button>
+    <p class="gate-small">Inside are a few pieces of us.</p>
+  </div>
+  <div class="gate-progress"><span class="active"></span><span></span><span></span></div>
+</div>
+<div id="loader" class="loader"><div class="loader-heart">♡</div><p>Something beautiful is loading…</p></div>
+<div class="noise" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+<button id="musicBtn" class="music-btn" aria-label="Toggle music"><span>♪</span><i></i></button>
+<nav class="nav" aria-label="Main navigation"><a href="#home">A</a><div class="nav-line"></div><span id="sectionLabel">A little universe</span></nav>
+
+<main>
+<section id="home" class="hero section">
+  <div class="hero-orbit orbit-1"></div><div class="hero-orbit orbit-2"></div><div class="pink-glow" aria-hidden="true"></div>
+  <div class="hero-content reveal">
+    <p class="eyebrow">A little universe, made for</p>
+    <h1>Nusrat <em>Jahan</em></h1>
+    <p class="hero-date">12 · 10 · 2026</p>
+    <p class="hero-sub">Scroll slowly. I made this little world just for you.</p>
+    <a class="scroll-cue" href="#countdown"><span></span>Begin our story</a>
+  </div>
+</section>
+
+<section id="countdown" class="section countdown-section">
+  <div class="section-inner reveal">
+    <p class="eyebrow">Until your day</p>
+    <h2>Counting the moments<br><em>until I celebrate you.</em></h2>
+    <div id="countdownGrid" class="countdown-grid" aria-live="polite">
+      <div><strong id="days">00</strong><span>days</span></div><div><strong id="hours">00</strong><span>hours</span></div><div><strong id="minutes">00</strong><span>minutes</span></div><div><strong id="seconds">00</strong><span>seconds</span></div>
+    </div>
+    <p id="countdownMessage" class="soft-copy">Every second is bringing me closer to your birthday.</p>
+  </div>
+</section>
+
+<section id="story" class="section story-section">
+  <div class="section-inner wide">
+    <div class="reveal section-heading"><p class="eyebrow">It started with a pitha utsob</p><h2>Somewhere between a crowd<br>and <em>you.</em></h2></div>
+    <div class="timeline">
+      <article class="memory reveal"><div class="memory-number">01</div><div class="memory-copy"><p class="eyebrow">Pitha Utsob · 2025</p><h3>The first hello</h3><p>We met at Pitha Utsob in 2025. I didn't know that one ordinary day would quietly become the beginning of one of the most beautiful chapters of my life.</p></div><div class="memory-image placeholder" data-story-index="0"><span>Add your first photo</span></div></article>
+      <article class="memory reverse reveal"><div class="memory-number">02</div><div class="memory-copy"><p class="eyebrow">Doyel Chottor</p><h3>Closer than before</h3><p>Our first meet at Doyel Chottor. Holding your hand, sitting beside you, being close to you — those simple moments still feel impossibly special to me.</p></div><div class="memory-image placeholder" data-story-index="1"><span>Add Doyel Chottor photo</span></div></article>
+      <article class="memory reveal"><div class="memory-number">03</div><div class="memory-copy"><p class="eyebrow">18 February 2025</p><h3>And then, us.</h3><p>18 February 2025. The day our story became ours. If I could revisit one date just to feel that happiness again, I'd choose this one.</p></div><div class="memory-image placeholder" data-story-index="2"><span>Add your couple photo</span></div></article>
+      <article class="memory reverse reveal"><div class="memory-number">04</div><div class="memory-copy"><p class="eyebrow">Our first rain</p><h3>We let the sky fall</h3><p>Our first brishti together — wet clothes, rain everywhere, and somehow the whole world felt quieter because I was there with you.</p></div><div class="memory-image placeholder" data-story-index="3"><span>Add rain photo</span></div></article>
+      <article class="memory reveal"><div class="memory-number">05</div><div class="memory-copy"><p class="eyebrow">Your first birthday with me</p><h3>A day worth remembering</h3><p>Your first birthday celebration was so special. I hope every birthday after this gives you another reason to smile — and lets me be beside you for as many as life gives us.</p></div><div class="memory-image placeholder" data-story-index="4"><span>Add birthday photo</span></div></article>
+      <article class="memory reverse reveal"><div class="memory-number">06</div><div class="memory-copy"><p class="eyebrow">Sea · Hills · Clouds</p><h3>My favorite view had you in it</h3><p>Watching the sea and the hills and clouds together was beautiful. But honestly, my favorite part of those views was sharing them with you.</p></div><div class="memory-image placeholder" data-story-index="5"><span>Add travel photo</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section gallery-section">
+  <div class="section-inner wide"><div class="reveal section-heading"><p class="eyebrow">Little pieces of us</p><h2>Moments I want<br>to <em>keep forever.</em></h2></div>
+  <p class="gallery-note">Every little picture here is one more piece of our story. ♡</p>
+<div class="gallery" id="galleryGrid">
+    <button class="photo-card tall placeholder" data-caption="01 · Pitha Utsob — the first hello"><span>01 · Pitha Utsob</span></button>
+    <button class="photo-card placeholder" data-caption="02 · Doyel Chottor — holding hands"><span>02 · Doyel Chottor</span></button>
+    <button class="photo-card wide-card placeholder" data-caption="03 · 18 February — our story"><span>03 · 18 February</span></button>
+    <button class="photo-card placeholder" data-caption="04 · Our first rain"><span>04 · First rain</span></button>
+    <button class="photo-card tall placeholder" data-caption="05 · Your first birthday celebration"><span>05 · First birthday</span></button>
+    <button class="photo-card placeholder" data-caption="06 · Sea · Hills · Clouds"><span>06 · Sea & Hills</span></button>
+    <button class="photo-card wide-card placeholder" data-caption="07 · Sweet memory"><span>07 · Sweet memory</span></button>
+    <button class="photo-card placeholder" data-caption="08 · Cute memory"><span>08 · Cute memory</span></button>
+    <button class="photo-card tall placeholder" data-caption="09 · Us together"><span>09 · Us together</span></button>
+    <button class="photo-card placeholder" data-caption="10 · Happy moment"><span>10 · Happy moment</span></button>
+    <button class="photo-card placeholder" data-caption="11 · Beautiful day"><span>11 · Beautiful day</span></button>
+    <button class="photo-card placeholder" data-caption="12 · Little memory"><span>12 · Little memory</span></button>
+    <button class="photo-card placeholder" data-caption="13 · Sweet memory"><span>13 · Sweet memory</span></button>
+    <button class="photo-card placeholder" data-caption="14 · Beautiful moment"><span>14 · Beautiful moment</span></button>
+    <button class="photo-card placeholder" data-caption="15 · Little memory"><span>15 · Little memory</span></button>
+    <button class="photo-card placeholder" data-caption="16 · Us together"><span>16 · Us together</span></button>
+    <button class="photo-card placeholder" data-caption="17 · Cute memory"><span>17 · Cute memory</span></button>
+    <button class="photo-card placeholder" data-caption="18 · Happy moment"><span>18 · Happy moment</span></button>
+    <button class="photo-card placeholder" data-caption="19 · Beautiful day"><span>19 · Beautiful day</span></button>
+    <button class="photo-card placeholder" data-caption="20 · Little memory"><span>20 · Little memory</span></button>
+    <button class="photo-card placeholder" data-caption="21 · Little memory"><span>21 · Little memory</span></button>
+    <button class="photo-card placeholder" data-caption="22 · Sweet moment"><span>22 · Sweet moment</span></button>
+    <button class="photo-card placeholder" data-caption="23 · A favorite memory"><span>23 · A favorite memory</span></button>
+    <button class="photo-card placeholder" data-caption="24 · Together"><span>24 · Together</span></button>
+    <button class="photo-card placeholder" data-caption="25 · Beautiful day"><span>25 · Beautiful day</span></button>
+    <button class="photo-card placeholder" data-caption="26 · Happy memory"><span>26 · Happy memory</span></button>
+    <button class="photo-card placeholder" data-caption="27 · Rainy memory"><span>27 · Rainy memory</span></button>
+    <button class="photo-card placeholder" data-caption="28 · A little moment"><span>28 · A little moment</span></button>
+    <button class="photo-card placeholder" data-caption="29 · Us"><span>29 · Us</span></button>
+    <button class="photo-card placeholder" data-caption="30 · Forever memory"><span>30 · Forever memory</span></button>
+  </div></div>
+</section>
+
+<section id="reasons" class="section reasons-section">
+  <div class="section-inner"><div class="reveal section-heading center"><p class="eyebrow">If you ever forget</p><h2>Here are a few reasons<br><em>I love you.</em></h2></div>
+  <div class="reason-grid">
+    <article class="reason reveal"><span>01</span><h3>Your smile</h3><p>It can change the mood of an entire day without even trying.</p></article>
+    <article class="reason reveal"><span>02</span><h3>The way you feel like home</h3><p>Some people are places. Somehow, you became mine.</p></article>
+    <article class="reason reveal"><span>03</span><h3>The little things</h3><p>The tiny moments with you are the ones I find myself remembering most.</p></article>
+    <article class="reason reveal"><span>04</span><h3>Because you're you</h3><p>No grand explanation needed. I love you because you're Nusrat.</p></article>
+  </div></div>
+</section>
+
+<section id="letter" class="section letter-section">
+  <div class="letter-glow"></div><div class="section-inner letter-inner reveal">
+    <p class="eyebrow">A letter for my beautiful pori</p>
+    <div class="letter-paper">
+      <p class="script">My Nusrat,</p>
+      <p>Happy Birthday my beautiful pori. My heart.</p>
+      <p>I love you very much. More than these little words can ever explain.</p>
+      <p>I wish that you be happy in your whole life. I want to see you smile, grow, dream, and get every beautiful thing you deserve.</p>
+      <p>I wanna spend my whole life with you. Together, we will explore, visit, tour everything. We'll collect places, stories, rainy days, sunsets, silly moments and a thousand more memories.</p>
+      <p>And whenever life gets difficult, I hope you remember that there is someone who wants to stand beside you through it all.</p>
+      <p class="script sign">Always yours,<br>Ahanaf</p>
+    </div>
+  </div>
+</section>
+
+<section id="birthday-magic" class="section birthday-magic-section">
+  <div class="section-inner wide">
+    <div class="reveal section-heading center">
+      <p class="eyebrow">Birthday magic</p>
+      <h2>Three little things<br><em>just for you.</em></h2>
+      <p class="soft-copy">Tap them. Make a wish. Let the birthday magic begin. ♡</p>
+    </div>
+    <div class="magic-grid">
+      <article class="magic-card reveal cake-scene">
+        <div class="magic-card-top"><span>01</span><span>Make a wish</span></div>
+        <div class="cake-wrap" id="cakeWrap" aria-label="Birthday cake animation">
+          <div class="cake-plate"></div>
+          <div class="cake cake-base"><div class="cake-cream"></div><div class="cake-drip d1"></div><div class="cake-drip d2"></div><div class="cake-drip d3"></div></div>
+          <div class="candle"><div class="flame" id="candleFlame"></div></div>
+          <div class="cake-slice" id="cakeSlice"></div>
+        </div>
+        <h3>Cut the cake</h3><p>First, blow the candle. Then cut a tiny slice for me. 🍰</p>
+        <div class="magic-actions"><button class="magic-btn" id="blowCandle">♡ Blow candle</button><button class="magic-btn" id="cutCake">Cut the cake ✂</button></div>
+      </article>
+      <article class="magic-card reveal gift-scene">
+        <div class="magic-card-top"><span>02</span><span>A tiny present</span></div>
+        <div class="gift-wrap" id="giftWrap" aria-label="Gift box animation">
+          <div class="gift-lid"><span></span></div><div class="gift-box"><span class="ribbon-v"></span><span class="ribbon-h"></span></div><div class="gift-sparkles">✦　♡　✦</div>
+        </div>
+        <h3>Open your gift</h3><p>There is a little message hidden inside this one.</p>
+        <button class="magic-btn wide" id="openGift">Open the gift 🎁</button>
+        <div class="gift-message" id="giftMessage">You are my favorite surprise. ♡</div>
+      </article>
+      <article class="magic-card reveal party-scene">
+        <div class="magic-card-top"><span>03</span><span>Birthday sky</span></div>
+        <div class="party-stage" id="partyStage">
+          <span class="balloon b1">♥</span><span class="balloon b2">♥</span><span class="balloon b3">♥</span>
+          <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">♡</span>
+          <div class="confetti-line"></div><div class="party-cake-icon">🎂</div>
+        </div>
+        <h3>Make it sparkle</h3><p>One tap and the whole birthday sky comes alive.</p>
+        <button class="magic-btn wide" id="celebrateBtn">Celebrate! ✨</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="surprise" class="section surprise-section">
+  <div class="section-inner center reveal">
+    <p class="eyebrow">Little secret doors</p><h2>I saved some tiny<br><em>surprises for you.</em></h2>
+    <div class="surprise-buttons"><button class="pink-btn" data-surprise="first">♡ Open our beginning</button><button class="pink-btn" data-surprise="rain">☁ Open the rain</button><button class="pink-btn" data-surprise="future">✈ Open our future</button></div>
+    <button id="surpriseBtn" class="pink-btn" style="margin-top:18px">Open the final surprise →</button>
+  </div>
+</section>
+<div id="surpriseModal" class="surprise-modal" aria-hidden="true"><div class="surprise-card"><button id="closeSurprise" class="surprise-close" aria-label="Close">×</button><img id="surpriseImg" alt="Surprise memory"><div class="surprise-copy"><h3 id="surpriseTitle"></h3><p id="surpriseText"></p></div></div></div>
+
+<section id="finale" class="finale section" aria-hidden="true">
+  <div class="finale-content reveal"><div class="heart-burst">♡</div><p class="eyebrow">12 October 2026</p><h2>Happy Birthday,<br><em>Nusrat Jahan.</em></h2><p>You are one of the most beautiful parts of my story.<br>And I hope this story has a very, very long way to go.</p><div class="forever">Let’s explore the whole world together. ∞</div></div>
+</section>
+</main>
+
+<div id="lightbox" class="lightbox" aria-hidden="true"><button id="closeLightbox" aria-label="Close">×</button><img id="lightboxImg" alt="Memory"><p id="lightboxCaption"></p></div>
+<audio id="music" loop preload="auto" autoplay></audio>
+<script src="js/media-config.js?v=4" defer></script>
+<script src="js/app.js?v=4" defer></script>
+</body>
+</html>
